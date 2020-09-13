@@ -1,0 +1,17 @@
+.text-primary {
+  color: #28a745;
+}
+.text-secondary {
+  color: #0284d0;
+}
+
+/*button*/
+.btn {
+  /*Step 4.1*/
+  cursor: pointer;
+  padding: 10px 30px;
+  color: #fff;
+  background-color: #28a745;
+  border: none;
+  border-radius: 5px;
+}

@@ -1,0 +1,152 @@
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+body{
+    width:100vw;                    /*Note1: width của body là mình muốn xem toàn màn hình*/  /*Step1*/
+    font-family: 'Open Sans', sans-serif;
+    background:#fff;        /*Step2*/
+    color:#333;
+    line-height:1.6;          /*/step2/*/
+}
+a{                  /*Step2*/
+    text-decoration:none;   
+    color:#333;
+}
+h1,h2{              /*Step2*/
+    font-weight:300;
+    line-height:1.2;
+}
+p{              /* Step2*/
+    margin:10px 0;
+}
+
+/*Style: header*/
+header{                 /*Step1*/
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    width:100vw;            /*Note4: này viết lúc flexbox layout: vì là display:flex các items nó vừa content và xếp sát nhau flex-start, nên mình banh caí khung header ra 100vw luôn.*/
+    height:70px;        /*/Step1:*/
+    background-color: #333; /* Step3*/
+    opacity: 0.8; 
+    /*Note3: 0.7 là opacity, cho nó trong trong, đẹp*/
+    color:#fff;
+    padding:5px 40px;
+    position:fixed;
+    
+}
+
+header .right{          /* Step3*/
+    display:flex;
+}
+header .right a{    /*Step3*/
+    padding:10px 20px;
+    color:#fff;
+}
+header .right a:hover{      /*Step3*/
+    border-bottom: #28A745 solid 2px;
+    
+}
+
+/*Style: main*/
+main{                       /*Step1*/
+    width:100vw;  /*Note5: muốn cái khung main nó banh ra full màn hình thì set width và heigh như vầy*/
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    background:url("../image_resources/home/showcase.jpg");
+    color:white;
+    box-shadow: inset 0 0 0 100vmax rgba(5, 5, 5, 0.6); /*Note6: muốn tạo 1 layover màu trong trong cover cái background. học công thức:
+    box-shadow: inset 0 0 0 100vmax rgba(....) */
+}                              /*/Step1*/
+main h1{        /* Step4*/
+    font-size:3rem;;
+}
+main p{         /* Step4*/
+    font-size:1.5rem;
+}
+
+/* section & img */  /* Step1*/
+section{
+    width:100vw;
+}
+.three-columns .rows img{
+    width: 30vw;
+}
+.two-columns img{
+    width:50vw;
+}
+.cases-img img{
+    width:24vw;     /* /Step1*/
+}
+/* columns & rows */
+.columns{
+    display:flex;       /*Step1*/
+}
+.three-columns>*{
+    flex-basis:33.33%; 
+    text-align:center; /* Step1*/
+}
+
+.two-columns>*{
+    flex-basis:50%;     /* Step1*/
+}
+
+.rows{                  /* Step1*/
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding:4% 0;               /* /Step1*/
+}
+/* .three-columns p{
+    width:95%;
+    text-align:center;
+    margin-top:20px;
+} */
+
+.cases-img {        /* Step1*/
+    display:flex; 
+    flex-flow:row wrap;
+    justify-content:space-around;       /* /Step1*/
+}
+
+.cases-img a:hover{              /*Note7: cho cái hình mờ đi khi hover nó*/
+    opacity:0.7;                   
+}
+/* section #invest*/    /* Step3*/
+#invest{
+    padding:30px;
+}
+#invest i{                      
+    background-color:#28A745;
+    color: #fff;
+    padding:1rem;
+    border-radius:50%;
+}      
+#invest h3{
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+/*Style: footer*/
+footer{                         
+    display:flex;               /* Step1*/
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:4%;                 /* /Step1*/
+    background-color:#5B6366;
+    color:white;
+}
+footer img{
+    width:40px;
+    margin: 5px 10px;
+}
+/*Step 1: dùng flexbox layout toàn trang, có thể dùng width 1 đôi chỗ*/
+/* Step 4.1 qua util.css + tạo class cho css*/
+
+
